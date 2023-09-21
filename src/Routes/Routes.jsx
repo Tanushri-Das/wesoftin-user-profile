@@ -18,7 +18,7 @@ const routes=createBrowserRouter([
                 element:<ListView/>
             },
             {
-                path: '/list-view/:id', // Parameterized route
+                path: '/detail-view/:id', // Parameterized route
                 element: <DetailView />,
               },
         ]

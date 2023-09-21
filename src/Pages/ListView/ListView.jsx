@@ -73,14 +73,14 @@ const UserProfileList = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-10">
       {users.map((user) => (
         <Link
-        to={`/list-view/${user.id}`}
+        to={`/detail-view/${user.id}`}
           key={user.id}
           onClick={() => handleUserClick(user)}
         >
           <div className="bg-white rounded-lg shadow-lg">
             <div className="p-3">
               <img
-                src={user.profilePicture}
+                src={user.picture}
                 alt={user.name}
                 className="mx-auto w-full h-64 mb-6 rounded"
               />
