@@ -2,4 +2,25 @@
     .user-detail-card{
         display: none;
     }
+    .table-large{
+        display: none;
+    }
+}
+@media (min-width: 481px) and (max-width: 640px){
+    .user-detail-card{
+        display: none;
+    }
+    .table-large{
+        display: none;
+    }
+}
+@media (min-width: 641px) and (max-width: 991px) {
+    .table-large{
+        display: none;
+    }
+}
+@media (min-width: 991px) and (max-width: 1023px) {
+    .user-detail-card{
+        display: none;
+    }
 }

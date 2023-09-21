@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useUserContext } from "../../Context/UserContext";
 import Spinner from "../../Components/Spinner/Spinner";
+import './UserDetail.css'
 
 const UserDetail = () => {
   // Access the user ID from the URL parameters
@@ -119,7 +120,7 @@ const UserDetail = () => {
 
         {/* User details table for larger screens */}
         {selectedUser && (
-          <div className="hidden lg:flex">
+          <div className="table-large">
             <table className="w-full bg-white mt-4">
               <thead>
                 <tr>
