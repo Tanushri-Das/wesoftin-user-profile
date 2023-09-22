@@ -86,11 +86,11 @@ const UserDetail = () => {
         {selectedUser && (
           <div className="sm:w-3/4 md:w-1/2 mx-auto user-detail-card lg:hidden">
             <div className="bg-white rounded-lg shadow-lg mx-3">
-              <div className="pt-3 pb-5 border border-red-500">
+              <div className="pt-3 pb-5">
                 <img
                   src={selectedUser.picture}
                   alt={selectedUser.name}
-                  className="px-3 border border-red-500"
+                  className="px-3"
                 />
                 <div className="text-center my-5">
                   <p className="text-lg font-semibold mb-1">
