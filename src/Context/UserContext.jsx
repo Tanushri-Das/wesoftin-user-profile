@@ -17,7 +17,7 @@ export const UserProvider = ({ children }) => {
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
         // Fetch data from the Users.json file
-        const response = await fetch('/Users.json'); // Update the path
+        const response = await fetch('/Users.json');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

@@ -10,15 +10,14 @@ const UserDetail = () => {
   const { selectedUser, isLoading, setSelectedUser } = useUserContext();
 
   useEffect(() => {
-    // Replace this with your actual data fetching logic (e.g., API request)
-    // Here, we assume you have a JSON file named 'Users.json' in your public folder
+
     const fetchUserData = async () => {
       try {
         // Simulate a delay
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
         // Fetch user data from the JSON file
-        const response = await fetch("/Users.json"); // Update the path
+        const response = await fetch("/Users.json");
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
@@ -83,7 +82,7 @@ const UserDetail = () => {
           </div>
         )}
 
-        {/* User details table for larger screens */}
+        {/* User details card for larger screens */}
         {selectedUser && (
           <div className="sm:w-3/4 md:w-1/2 mx-auto user-detail-card lg:hidden">
             <div className="bg-white rounded-lg shadow-lg mx-3">
@@ -140,7 +139,7 @@ const UserDetail = () => {
                     <img
                       src={selectedUser.picture}
                       alt={selectedUser.name}
-                      className="mx-auto w-20 h-20 rounded-full"
+                      className="mx-auto w-24 h-24 rounded-full"
                     />
                   </td>
                   <td className="py-2 px-4 border-b text-center text-lg">
