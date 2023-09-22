@@ -167,9 +167,9 @@ const UserDetail = () => {
         )}
       </div>
       <div className="flex justify-center mt-10">
-        <Link to="/">
+        <Link to="/list-view">
           <button className="bg-cyan-400 py-5 px-10 rounded-full text-xl text-white font-semibold">
-            Back to Home
+            Back to Userprofile List page
           </button>
         </Link>
       </div>
