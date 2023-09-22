@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useUserContext } from "../../Context/UserContext";
 import Spinner from "../../Components/Spinner/Spinner";
-import './UserDetail.css'
+import "./UserDetail.css";
 
 const UserDetail = () => {
   // Access the user ID from the URL parameters
@@ -44,7 +44,7 @@ const UserDetail = () => {
   }
 
   return (
-    <div className="my-12">
+    <div className="my-20">
       <h1 className="text-center mt-16 mb-12 text-2xl font-semibold">
         View User Details
       </h1>
@@ -53,13 +53,13 @@ const UserDetail = () => {
         {/* User details card for smaller screens */}
         {selectedUser && (
           <div className="bg-white rounded-lg shadow-lg mx-3 sm:hidden">
-            <div className="py-5">
+            <div className="pt-3 pb-5">
               <img
                 src={selectedUser.picture}
                 alt={selectedUser.name}
-                className="mx-auto w-40 h-40 rounded-full"
+                className="px-3"
               />
-              <div className="text-center my-4">
+              <div className="text-center my-5">
                 <p className="text-lg font-semibold mb-1">
                   Name: {selectedUser.name}
                 </p>
@@ -87,13 +87,13 @@ const UserDetail = () => {
         {selectedUser && (
           <div className="sm:w-3/4 md:w-1/2 mx-auto user-detail-card lg:hidden">
             <div className="bg-white rounded-lg shadow-lg mx-3">
-              <div className="py-5">
+              <div className="pt-3 pb-5 border border-red-500">
                 <img
                   src={selectedUser.picture}
                   alt={selectedUser.name}
-                  className="mx-auto w-40 h-40 rounded-full"
+                  className="px-3 border border-red-500"
                 />
-                <div className="text-center my-4">
+                <div className="text-center my-5">
                   <p className="text-lg font-semibold mb-1">
                     Name: {selectedUser.name}
                   </p>
@@ -166,6 +166,13 @@ const UserDetail = () => {
             </table>
           </div>
         )}
+      </div>
+      <div className="flex justify-center mt-10">
+        <Link to="/">
+          <button className="bg-cyan-400 py-5 px-10 rounded-full text-xl text-white font-semibold">
+            Back to Home
+          </button>
+        </Link>
       </div>
     </div>
   );

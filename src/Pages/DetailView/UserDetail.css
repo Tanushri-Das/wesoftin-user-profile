@@ -14,7 +14,10 @@
         display: none;
     }
 }
-@media (min-width: 641px) and (max-width: 991px) {
+@media (min-width: 640px) and (max-width: 991px) {
+    .user-detail-card{
+        display: block;
+    }
     .table-large{
         display: none;
     }

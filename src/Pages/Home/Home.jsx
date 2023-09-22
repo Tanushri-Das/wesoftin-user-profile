@@ -8,7 +8,7 @@ const Home = () => {
       <h2 className="text-3xl font-semibold text-center mb-5">
         Welcome to my website
       </h2>
-      <p className="text-xl font-medium text-center mb-10">
+      <p className="text-lg md:text-xl font-medium text-center mb-10">
         Do you want to see the users of my website ? Kindly Click this button
       </p>
       <div class="flex text-center justify-center">
